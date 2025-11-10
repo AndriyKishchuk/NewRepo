@@ -21,6 +21,9 @@ namespace Program
             ComplexNumber number2 = new ComplexNumber(1, -2);
             ComplexNumber number3 = number1.Clone();
             Console.WriteLine($"Number 1: {number1}");
+            Console.WriteLine($"Number 2: {number2}");
+            Console.WriteLine($"Number 3 (clone of Number 1): {number3}");
+
         }
     }
     public class ComplexNumber : ICloneable, IEquatable, IModular
@@ -28,12 +31,12 @@ namespace Program
         private double re;
         private double im;
 
-        public double re_1
+        public double Re
         {
             get { return re; }
             set { re = value; }
         }
-        public double im_1
+        public double Im
         {
             get { return im; }
             set { im = value; }
