@@ -13,6 +13,7 @@ namespace Program
     {
         double Module();
     }
+  
     class Program
     {
         static void Main(string[] args)
@@ -49,8 +50,8 @@ namespace Program
         }
         public override string ToString()
         {
-            string result = im >= 0 ? $"{re}+{im}i" : $"{re}{im}i";
-            return $"{result}{Math.Abs(im)}i";
+            string result = im >= 0 ? $"+" : $"-i";
+            return $"{re} {result} {Math.Abs(im)}i";
         }
         public static ComplexNumber operator +(ComplexNumber c1, ComplexNumber c2)
         {
@@ -102,7 +103,8 @@ namespace Program
             return Math.Sqrt(re * re + im * im);
 
         }
-       
+     
+
     }
 }
 
